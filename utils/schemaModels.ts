@@ -2,9 +2,11 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
+import { ItemDataType, UserDataType } from "./types";
 
 
-const ItemSchema = new Schema({
+
+const ItemSchema = new Schema<ItemDataType>({
 	title: String,
 	image: String,
 	price: String,
@@ -15,7 +17,7 @@ export const ItemModel = mongoose.models.Item || mongoose.model("Item", ItemSche
 
 
 
-const UserSchema = new Schema({
+const UserSchema = new Schema<UserDataType>({
 	name: String,
 	email: {
 		type: String,
