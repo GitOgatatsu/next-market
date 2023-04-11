@@ -6,9 +6,9 @@ const createItem = (req, res) => {
 		connectDB();
 //		console.log(req.body);
 		ItemModel.create(req.body);
-		return res.status(200).json({ message: "アイテム作成" });
+		return res.status(200).json({ message: "アイテム作成成功" });
 	} catch (err) {
-
+		return res.status(400).json({ message: "アイテム作成失敗" });
 	}
 };
 
