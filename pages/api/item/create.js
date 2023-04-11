@@ -1,5 +1,6 @@
 import connectDB from "../../../utils/database";
 import { ItemModel } from "../../../utils/schemaModels";
+import auth from "../../../utils/auth";
 
 const createItem = (req, res) => {
 	try {
@@ -12,4 +13,4 @@ const createItem = (req, res) => {
 	}
 };
 
-export default createItem;
+export default auth(createItem);
