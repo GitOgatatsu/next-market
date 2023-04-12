@@ -6,7 +6,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 const getSingleItem = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		await connectDB();
-		console.log(req.query);
+//		console.log(req.query);
 		const singleItem = await ItemModel.findById(req.query.id);
 		if (!singleItem) {
 			return res.status(400).json({ message: "該当アイテムなし(Single)", singleItem: singleItem });

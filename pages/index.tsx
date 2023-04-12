@@ -4,11 +4,12 @@ import Image from "next/image";
 
 
 const ReadAllItems = (props) => {
+
 	return (
 		<div>
 			<div>
 				{props.allItems.map(item =>
-					<Link href="" key={item._id}>
+					<Link href={`/item/${item._id}`} key={item._id}>
 							<Image src={item.image} width="750" height="500" alt="item-image" />
 							<div>
 								<h2>{item.price}</h2>
@@ -20,9 +21,12 @@ const ReadAllItems = (props) => {
 			</div>
 		</div>
 	);
+
 };
 
 export default ReadAllItems;
+
+
 
 export const getServerSideProps = async () => {
 	const response = await fetch("http://localhost:3000/api/item/readall");
