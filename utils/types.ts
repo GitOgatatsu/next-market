@@ -40,3 +40,21 @@ export interface ExtendedNextApiRequestUser extends NextApiResponse {
 export interface SavedUserDataType extends UserDataType {
 	_id: Types.ObjectId;
 }
+
+export interface SavedItemDataType extends ItemDataType {
+	_id: Types.ObjectId;
+}
+
+export interface ResReadAllType {
+	message: string;
+	allItems?: SavedItemDataType[];
+}
+
+export interface ExtendedNextApiRequestItem extends NextApiRequest {
+	body: ItemDataType;
+}
+
+export interface ResReadSingleType {
+	message: string;
+	singleItem?: SavedItemDataType;
+}

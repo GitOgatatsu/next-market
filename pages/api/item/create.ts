@@ -2,7 +2,10 @@ import connectDB from "../../../utils/database";
 import { ItemModel } from "../../../utils/schemaModels";
 import auth from "../../../utils/auth";
 
-const createItem = (req, res) => {
+import { NextApiResponse } from "next";
+import { ExtendedNextApiRequestAuth, ExtendedNextApiRequestItem, ResMessageType } from "../../../utils/types";
+
+const createItem = (req: ExtendedNextApiRequestItem, res: NextApiResponse<ResMessageType>) => {
 	try {
 		connectDB();
 //		console.log(req.body);
