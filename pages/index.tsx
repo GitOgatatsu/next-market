@@ -14,7 +14,7 @@ const ReadAllItems = (props) => {
 							<div>
 								<h2>{item.price}</h2>
 								<h3>{item.title}</h3>
-								<p>{item.description}.substring(0, 80)</p>
+							<p>{item.description.substring(0, 80)}</p>
 							</div>
 					</Link>
 				)}
