@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -14,6 +15,10 @@ const ReadSingleItem = (props) => {
 				<h2>¥{props.singleItem.price}</h2>
 				<hr />
 				<p>{props.singleItem.description}</p>
+				<div>
+					<Link href={`/item/update/${props.singleItem._id}`}>アイテム編集</Link>
+					<Link href={`/item/delete/${props.singleItem._id}`}>アイテム削除</Link>
+				</div>
 			</div>
 		</div>
 	);
