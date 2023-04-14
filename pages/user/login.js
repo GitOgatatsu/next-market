@@ -29,7 +29,7 @@ const Login = () => {
 	};
 
 	return (
-		<dev>
+		<div>
 			<h1>ログイン</h1>
 			<form onSubmit={handleSubmit}>
 				<input
@@ -46,7 +46,7 @@ const Login = () => {
 					type="text" name="password" placeholder="パスワード" required />
 				<button>ログイン</button>
 			</form>
-		</dev>
+		</div>
 	);
 
 };
