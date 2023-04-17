@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 
 
 
@@ -33,7 +34,8 @@ const Register = () => {
 
 	return (
 		<div>
-			<h1>ユーザ登録</h1>
+			<Head><title>ユーザ登録</title></Head>
+			<h1 className="page-title">ユーザ登録</h1>
 			<form onSubmit={handleSubmit}>
 				<input value={name}
 					onChange={(e) => {

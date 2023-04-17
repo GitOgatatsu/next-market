@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 
 
 
@@ -8,6 +9,8 @@ const ReadAllItems = (props) => {
 	return (
 		<div>
 			<div>
+				<Head><title>Next Market</title></Head>
+				<div className="grid-container-in">
 				{props.allItems.map(item =>
 					<Link href={`/item/${item._id}`} key={item._id}>
 							<Image src={item.image} width="750" height="500" alt="item-image" />
@@ -17,7 +20,8 @@ const ReadAllItems = (props) => {
 							<p>{item.description.substring(0, 80)}</p>
 							</div>
 					</Link>
-				)}
+					)}
+				</div>
 			</div>
 		</div>
 	);

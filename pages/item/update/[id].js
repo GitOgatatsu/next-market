@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useAuth from "../../../utils/useAuth";
+import Head from "next/head";
 
 
 
@@ -41,7 +42,8 @@ const UpdateItem = (props) => {
 	if (loginUser === props.singleItem.email) {
 		return (
 			<div>
-				<h1>アイテム編集</h1>
+				<Head><title>アイテム編集</title></Head>
+				<h1 className="page-title">アイテム編集</h1>
 				<form onSubmit={handleSubmit}>
 					<input value={title}
 						onChange={(e) => { setTitle(e.target.value) }}
